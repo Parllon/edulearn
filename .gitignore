@@ -28,3 +28,9 @@ Thumbs.db
 # Cache
 .vite/
 *.local
+
+# Ferramentas de automacao
+.claude/
+.anthropic/
+.cursor/
+.aider*
