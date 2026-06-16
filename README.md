@@ -15,14 +15,71 @@ npm run preview  # pré-visualiza o build
 npm run typecheck # checagem de tipos (tsc --noEmit)
 ```
 
+## Estrutura de Arquivos
+
+```
+src/
+├── main.jsx                        # Ponto de entrada React
+├── app/
+│   ├── App.jsx                     # Componente raiz (rotas + providers)
+│   ├── App.module.css
+│   ├── components/
+│   │   ├── Header/
+│   │   │   ├── index.jsx           # Barra de navegação superior
+│   │   │   └── Header.module.css
+│   │   ├── LeftSidebar/
+│   │   │   ├── index.jsx           # Menu lateral de navegação
+│   │   │   └── LeftSidebar.module.css
+│   │   ├── RightSidebar/
+│   │   │   ├── index.jsx           # Lista de módulos/aulas do curso
+│   │   │   └── RightSidebar.module.css
+│   │   ├── VideoPlayer/
+│   │   │   ├── index.jsx           # Player de vídeo simulado
+│   │   │   └── VideoPlayer.module.css
+│   │   ├── Footer/
+│   │   │   ├── index.jsx
+│   │   │   └── Footer.module.css
+│   │   └── ui/
+│   │       └── Switch/
+│   │           ├── index.jsx       # Toggle (Radix UI)
+│   │           └── Switch.module.css
+│   ├── context/
+│   │   ├── AuthProvider.jsx        # Login / cadastro / logout (localStorage)
+│   │   ├── ThemeProvider.jsx       # Modo claro/escuro
+│   │   └── SettingsProvider.jsx    # Configurações de perfil do usuário
+│   └── pages/
+│       ├── Dashboard/              # Página inicial com estatísticas
+│       ├── MeusCursos/             # Listagem e busca de cursos
+│       ├── AssistirAula/           # Player + navegação de aulas
+│       ├── Certificados/           # Certificados gerados (download/share)
+│       ├── Conquistas/             # Badges desbloqueadas
+│       ├── Configuracoes/          # Perfil, notificações, privacidade
+│       ├── Login/
+│       └── Cadastro/
+├── data/
+│   └── mockData.js                 # Fonte única: cursos, conquistas, settings padrão
+├── hooks/
+│   └── useAsync.js                 # Hook genérico { data, loading, error }
+├── services/
+│   ├── api.js                      # Camada de serviço (mock → pronto para REST)
+│   ├── auth.js                     # Autenticação mock (localStorage)
+│   └── storage.js                  # Helpers de localStorage com namespace
+└── styles/
+    ├── index.css
+    ├── fonts.css
+    ├── globals.css
+    ├── tailwind.css
+    └── theme.css                   # CSS vars + dark mode (oklch)
+```
+
 ## Arquitetura
 
-- **`src/data/mockData.ts`** — fonte única de dados (cursos, módulos/aulas, certificados,
-  conquistas, configurações padrão) e tipos.
-- **`src/services/api.ts`** — camada de serviço assíncrona estilo `fetch`, com latência simulada,
+- **`src/data/mockData.js`** — fonte única de dados (cursos, módulos/aulas, certificados,
+  conquistas, configurações padrão).
+- **`src/services/api.js`** — camada de serviço assíncrona estilo `fetch`, com latência simulada,
   tratamento de erros e progresso derivado. Sobrepõe overrides do usuário vindos do `localStorage`.
-- **`src/services/storage.ts`** — helpers de `localStorage` (tema, configurações, progresso de aulas).
-- **`src/hooks/useAsync.ts`** — hook padrão de carregamento (`{ data, loading, error }`).
+- **`src/services/storage.js`** — helpers de `localStorage` (tema, configurações, progresso de aulas).
+- **`src/hooks/useAsync.js`** — hook padrão de carregamento (`{ data, loading, error }`).
 - **`src/app/context/`** — `ThemeProvider` (modo escuro persistido) e `SettingsProvider`
   (perfil/configurações compartilhados).
 
