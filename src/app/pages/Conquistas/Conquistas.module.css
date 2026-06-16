@@ -1,0 +1,221 @@
+.stateInfo {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--muted-foreground);
+}
+
+.stateError {
+  text-align: center;
+  padding: 3rem 0;
+  color: #dc2626;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted-foreground);
+}
+
+/* Resumo */
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.summaryIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-image: linear-gradient(to bottom right, #f59e0b, #ea580c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summaryIconSvg {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #ffffff;
+}
+
+.summaryBody {
+  flex: 1 1 0%;
+}
+
+.summaryTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summaryLabel {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.summaryValue {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.summaryTrack {
+  height: 0.625rem;
+  background-color: var(--muted);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.summaryFill {
+  height: 100%;
+  background-image: linear-gradient(to right, #f59e0b, #ea580c);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+/* Grade */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.15s ease;
+}
+
+.cardUnlocked {
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.15), 0 2px 4px -2px rgba(79, 70, 229, 0.15);
+}
+
+.cardLocked {
+  opacity: 0.7;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeUnlocked {
+  background-image: linear-gradient(to bottom right, #eef2ff, #faf5ff);
+}
+
+.badgeLocked {
+  background-color: var(--muted);
+  filter: grayscale(1);
+}
+
+.badgeEmoji {
+  font-size: 1.5rem;
+}
+
+.tagUnlocked {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #16a34a;
+  background-color: #dcfce7;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+}
+
+.tagLocked {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  background-color: var(--muted);
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+}
+
+.tagLockIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.cardTitle {
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.cardDesc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.cardProgress {
+  margin-top: auto;
+}
+
+.cardProgressRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.375rem;
+}
+
+.cardTrack {
+  height: 0.375rem;
+  background-color: var(--muted);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.cardFill {
+  height: 100%;
+  background-color: #4F46E5;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}

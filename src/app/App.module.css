@@ -1,0 +1,33 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+}
+
+.container {
+  display: flex;
+  flex: 1 1 0%;
+}
+
+.main {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/* Desktop: a área central rola por dentro; o restante fica fixo. */
+@media (min-width: 1024px) {
+  .container {
+    overflow: hidden;
+  }
+
+  .main {
+    overflow-y: auto;
+  }
+}
+
+.mainInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}

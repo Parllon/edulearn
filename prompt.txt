@@ -1,0 +1,41 @@
+Atue como um Desenvolvedor Front-end Sênior e Especialista em UI/UX.
+
+Por favor, acesse e analise o design no seguinte link do Figma:
+https://www.figma.com/make/UIxrhDgZDsuScHQS1Hp7TE?node-id=
+
+Sua tarefa é montar este projeto do zero, garantindo que o resultado visual fique "pixel-perfect" (exatamente igual ao design, respeitando espaçamentos, tipografia, cores e responsividade).
+
+Stack Tecnológica Obrigatória:
+
+Ambiente/Bundler: Vite
+
+Estilização: Tailwind CSS v4
+
+Linguagem: JavaScript (Vanilla JS)
+
+Requisitos do Projeto:
+
+Setup e Configuração: Me forneça os comandos exatos de terminal para iniciar o projeto com Vite, instalar as dependências necessárias e configurar o Tailwind CSS v4 corretamente.
+
+Desenvolvimento da Interface (Pixel-Perfect):
+
+Escreva o código index.html e o main.js (ou divida em módulos JS/Componentes, se achar que o código ficará mais limpo).
+
+Utilize as classes utilitárias do Tailwind v4 para recriar fielmente o layout do Figma.
+
+Garanta que a interface seja totalmente responsiva (Mobile First).
+
+Conexões com o Backend (Integração de API):
+
+Não quero apenas uma tela estática. Construa a lógica no JavaScript para conectar essa interface a um backend.
+
+Crie um arquivo separado (ex: api.js ou services.js) contendo funções assíncronas usando o fetch nativo para consumir uma API REST.
+
+Configure uma variável base API_URL.
+
+Simule as requisições necessárias baseadas na interface (ex: um GET para carregar listas de dados na tela, ou um POST caso haja formulários/botões de envio no design).
+
+Implemente o tratamento de erros (try/catch) e feedbacks visuais simples (como "Carregando..." enquanto a requisição é feita).
+
+Formato da Entrega:
+Por favor, me entregue o passo a passo de instalação, a estrutura de pastas sugerida e o código completo e detalhado de cada arquivo necessário para o projeto rodar perfeitamente.

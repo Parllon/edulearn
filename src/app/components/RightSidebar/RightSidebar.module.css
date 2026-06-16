@@ -1,0 +1,256 @@
+/* Mobile-first: currículo ocupa a largura total, abaixo do conteúdo. */
+.sidebar {
+  width: 100%;
+  background-color: var(--card);
+  border-top: 1px solid var(--border);
+}
+
+/* Desktop (>=1024px): coluna fixa à direita, com rolagem própria. */
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 20rem;
+    flex-shrink: 0;
+    border-top: none;
+    border-left: 1px solid var(--border);
+    height: calc(100vh - 64px);
+    position: sticky;
+    top: 4rem;
+    overflow-y: auto;
+  }
+}
+
+.container {
+  padding: 1.5rem;
+}
+
+.headerWrap {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.trigger:hover {
+  background-color: var(--accent);
+}
+
+.chevronWrap {
+  margin-top: 0.125rem;
+}
+
+.chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--muted-foreground);
+}
+
+.triggerBody {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.moduleTitle {
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+  transition: color 0.15s ease;
+}
+
+.trigger:hover .moduleTitle {
+  color: #4F46E5;
+}
+
+.moduleSubtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.moduleProgressRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.moduleProgressTrack {
+  flex: 1 1 0%;
+  height: 0.375rem;
+  background-color: var(--muted);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.moduleProgressFill {
+  height: 100%;
+  background-color: #4F46E5;
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+.moduleProgressCount {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+/* Conteúdo do accordion (animação de abrir/fechar) */
+.content {
+  overflow: hidden;
+}
+
+.content[data-state='open'] {
+  animation: accordionDown 0.2s ease-out;
+}
+
+.content[data-state='closed'] {
+  animation: accordionUp 0.2s ease-out;
+}
+
+@keyframes accordionDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordionUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.lessonsWrap {
+  border-top: 1px solid var(--border);
+}
+
+.lessonButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.lessonButtonCurrent {
+  background-color: #eef2ff;
+  border-left: 2px solid #4F46E5;
+}
+
+.lessonButtonIdle:hover {
+  background-color: var(--accent);
+}
+
+.lessonButtonDivider {
+  border-bottom: 1px solid var(--border);
+}
+
+.statusWrap {
+  flex-shrink: 0;
+}
+
+.statusDone {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background-color: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusDoneIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #ffffff;
+}
+
+.statusCurrent {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background-color: #4F46E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusCurrentIcon {
+  width: 0.625rem;
+  height: 0.625rem;
+  color: #ffffff;
+}
+
+.statusEmpty {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  border: 2px solid #d1d5db;
+}
+
+.lessonBody {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.lessonTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.125rem;
+}
+
+.lessonTitleCurrent {
+  color: #4F46E5;
+}
+
+.lessonTitleIdle {
+  color: var(--foreground);
+}
+
+.lessonDuration {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}

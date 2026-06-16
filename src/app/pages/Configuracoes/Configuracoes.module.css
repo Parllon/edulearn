@@ -1,0 +1,246 @@
+.stateInfo {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--muted-foreground);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted-foreground);
+}
+
+/* Campo de formulário compartilhado */
+.input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  transition: all 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #4F46E5;
+}
+
+.textarea {
+  height: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  resize: none;
+}
+
+/* Cartão de seção */
+.sectionCard {
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.sectionHead {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--muted);
+}
+
+.sectionHeadInner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #4F46E5;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionIconSvg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #ffffff;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.sectionContent > * + * {
+  border-top: 1px solid var(--border);
+}
+
+.field {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldLabel {
+  font-weight: 500;
+  color: var(--foreground);
+  font-size: 0.875rem;
+}
+
+.toggleRow {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleLabel {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+/* Ações */
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.saveButton {
+  height: 2.75rem;
+  padding: 0 1.5rem;
+  background-color: #4F46E5;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.saveButton:hover {
+  background-color: #4338CA;
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  height: 2.75rem;
+  padding: 0 1.5rem;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.cancelButton:hover {
+  background-color: var(--accent);
+}
+
+/* Zona de perigo */
+.dangerCard {
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fecaca;
+  overflow: hidden;
+}
+
+.dangerHead {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #fecaca;
+  background-color: #fef2f2;
+}
+
+.dangerTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #7f1d1d;
+}
+
+.dangerBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dangerDivider {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.dangerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dangerRowTitle {
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.dangerRowDesc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.dangerButton {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.dangerSoft {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.dangerSoft:hover {
+  background-color: #fecaca;
+}
+
+.dangerSolid {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.dangerSolid:hover {
+  background-color: #b91c1c;
+}

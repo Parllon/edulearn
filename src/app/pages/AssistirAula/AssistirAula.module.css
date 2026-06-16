@@ -1,0 +1,56 @@
+.stateInfo {
+  flex: 1 1 0%;
+  padding: 3rem;
+  text-align: center;
+  color: var(--muted-foreground);
+}
+
+.stateError {
+  flex: 1 1 0%;
+  padding: 3rem;
+  text-align: center;
+}
+
+.errorText {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.errorLink {
+  color: #4F46E5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.errorLink:hover {
+  text-decoration: underline;
+}
+
+/* Mobile-first: empilha conteúdo e currículo verticalmente. */
+.layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+
+.main {
+  flex: 1 1 0%;
+}
+
+/* Desktop (>=1024px): conteúdo e currículo lado a lado. */
+@media (min-width: 1024px) {
+  .layout {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .main {
+    overflow-y: auto;
+  }
+}
+
+.mainInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
