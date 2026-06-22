@@ -15,7 +15,7 @@ export { default as ProgressBar }     from './integrante2/ProgressBar';
 export { default as StatCard }        from './integrante2/StatCard';
 
 /* ── Integrante 3 ─────────────────────────────────────────────── */
-export { default as AchievementBadge } from './integrante3/AchievementBadge';
-export { default as SearchBar }        from './integrante3/SearchBar';
-export { default as FilterPills }      from './integrante3/FilterPills';
-export { default as EmptyState }       from './integrante3/EmptyState';
+export { default as AchievementBadge } from './eduardo/AchievementBadge';
+export { default as SearchBar }        from './eduardo/SearchBar';
+export { default as FilterPills }      from './eduardo/FilterPills';
+export { default as EmptyState }       from './eduardo/EmptyState';
