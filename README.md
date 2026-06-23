@@ -5,6 +5,15 @@ Vite + Tailwind CSS v4 + React Router 7**. A aplicação é funcional: busca/fil
 player com navegação e marcação de aulas concluídas, configurações persistidas, modo escuro e
 certificados (baixar/compartilhar).
 
+## Credenciais padrão
+
+| Campo | Valor |
+|-------|-------|
+| Email | `demo@edulearn.com` |
+| Senha | `demo123` |
+
+O usuário é inserido automaticamente no `localStorage` na primeira execução. É possível criar novas contas pela tela de cadastro.
+
 ## Como rodar
 
 ```bash
@@ -56,6 +65,18 @@ src/
 │       ├── Configuracoes/          # Perfil, notificações, privacidade
 │       ├── Login/
 │       └── Cadastro/
+├── components/
+│   ├── index.js                    # Barrel export de todos os componentes UI
+│   ├── eduardo/                    # Componentes de Eduardo
+│   │   ├── AchievementBadge/       # Badge de conquista do usuário
+│   │   ├── EmptyState/             # Tela vazia (sem resultados)
+│   │   ├── FilterPills/            # Filtros em formato de pills
+│   │   └── SearchBar/              # Barra de pesquisa
+│   └── Thales/                     # Componentes de Thales
+│       ├── CourseCard/             # Card de exibição de curso
+│       ├── CourseThumbnail/        # Miniatura/thumbnail do curso
+│       ├── ProgressBar/            # Barra de progresso
+│       └── StatCard/               # Card de estatística
 ├── data/
 │   └── mockData.js                 # Fonte única: cursos, conquistas, settings padrão
 ├── hooks/

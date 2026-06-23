@@ -67,3 +67,13 @@ export async function login({ email, password }) {
 export function logout() {
   writeJSON(StorageKeys.session, null);
 }
+
+const DEFAULT_USER = { name: 'Demo', email: 'demo@edulearn.com', password: 'demo123' };
+
+/** Insere o usuário padrão no localStorage se ainda não existir nenhum usuário cadastrado. */
+export function seedDefaultUser() {
+  const users = getUsers();
+  if (users.some((u) => u.email === DEFAULT_USER.email)) return;
+  users.push(DEFAULT_USER);
+  saveUsers(users);
+}
